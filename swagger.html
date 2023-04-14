@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Enter url</p>
+<input id="name" type="text" name="value" />
+<Button onclick="test()">Submit</Button>
+
+<script>
+    function test(){
+       var value= document.getElementById("name").value
+       fetch (value)
+    .then(x => x.json())
+    .then(y=>console.log(Object.keys(y.paths)))
+    }
+</script>
+
+</body>
+</html>
